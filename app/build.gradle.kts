@@ -5,8 +5,9 @@ plugins {
 
 android {
     namespace = "com.mihealth.liquidglass"
-    // libxposed 102.0.0's service/interface AARs require compileSdk >= 37.
-    compileSdk = 37
+    // libxposed 101.x requires compileSdk >= 36; android-37 is NOT yet
+    // installable on the GitHub runners, so we stay on API 36.
+    compileSdk = 36
     buildToolsVersion = "35.0.0"
 
     defaultConfig {
@@ -51,10 +52,9 @@ android {
 
 dependencies {
     // Provided by the framework at runtime; required to compile the module.
-    compileOnly("io.github.libxposed:api:102.0.0")
-
-    // Runtime support used by the module (prefs / config).
-    implementation("io.github.libxposed:service:102.0.0")
+    // 101.0.1 is the newest libxposed that still compiles against API 36
+    // (102.0.0 requires API 37, which the GitHub runners cannot install).
+    compileOnly("io.github.libxposed:api:101.0.1")
 
     // Liquid-glass renderer for the Android View system.
     implementation("com.github.QWEA0:liquidglass:v2.0.2")

@@ -27,9 +27,9 @@ jobs:
       - name: Configure Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Install missing SDK packages (platform 35/37 + build-tools 35.0.0)
+      - name: Install missing SDK packages (platform 35/36 + build-tools 35.0.0)
         run: |
-          sdkmanager "platforms;android-35" "platforms;android-37" "build-tools;35.0.0" || true
+          sdkmanager "platforms;android-35" "platforms;android-36" "build-tools;35.0.0" || true
 
       - name: Build release APK
         run: |
