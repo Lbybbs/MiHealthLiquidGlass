@@ -5,7 +5,8 @@ plugins {
 
 android {
     namespace = "com.mihealth.liquidglass"
-    compileSdk = 35
+    // libxposed 102.0.0's service/interface AARs require compileSdk >= 37.
+    compileSdk = 37
     buildToolsVersion = "35.0.0"
 
     defaultConfig {
