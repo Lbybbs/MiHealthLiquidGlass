@@ -1,0 +1,5 @@
+minApiVersion=101
+targetApiVersion=102
+staticScope=true
+autoHotReload=true
+description=小米运动健康 · 液态玻璃底栏（com.mi.health）
