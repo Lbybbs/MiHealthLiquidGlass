@@ -125,5 +125,7 @@ object GlassBarInjector {
         return activity.findViewById(id)
     }
 
-    private fun log(level: Int, msg: String) = Log.println(level, TAG, msg)
+    private fun log(level: Int, tag: String, msg: String) = Log.println(level, tag, msg)
+
+    private fun log(level: Int, tag: String, msg: String, tr: Throwable) = Log.println(level, tag, msg, tr)
 }
